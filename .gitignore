@@ -1,0 +1,20 @@
+# sbt related
+target/
+project/project/
+project/target/
+
+# dev related
+test_fir/
+
+# release related
+utils/bin/essent.jar
+
+# IDE related
+.idea/*
+
+# Generated FESVR build artifacts
+/third_party/fesvr/build/
+/.metals/
+/.vscode/
+/work_dir/
+/work-dir-cmp/

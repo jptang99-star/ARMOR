@@ -1,0 +1,25 @@
+ARMOR third-party source notices
+
+The public repository's existing MIT license is retained as LICENSE.
+Third-party and inherited code retains its applicable original notices and
+terms; inclusion here does not replace those terms with the root license.
+
+Essent compiler and supporting code
+Upstream: https://github.com/ucsc-vama/essent
+Original license from the supplied source snapshot: LICENSE.essent
+The compiler includes ARMOR modifications to Essent.
+
+FIRRTL integer types: include/uint.h and include/sint.h
+Upstream: https://github.com/ucsc-vama/firrtl-sig
+Upstream license: include/LICENSE.firrtl-sig
+The vendored headers include local modifications.
+
+FESVR: third_party/fesvr/include and third_party/fesvr/src
+Upstream: https://github.com/riscv-software-src/riscv-isa-sim
+Upstream license: third_party/fesvr/LICENSE
+This repository carries a minimized vendored source set and its build script,
+not the upstream Git history. Existing source notices are retained.
+
+The FIRRTL designs and workload/dhrystone.riscv are included from the
+author-provided release snapshot. This notice does not assert additional
+provenance or change their applicable rights.

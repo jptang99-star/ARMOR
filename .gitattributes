@@ -1,0 +1,3 @@
+designs/SmallBoom-8C.fir filter=lfs diff=lfs merge=lfs -text
+designs/LargeBoom-8C.fir filter=lfs diff=lfs merge=lfs -text
+designs/MegaBoom-8C.fir filter=lfs diff=lfs merge=lfs -text
