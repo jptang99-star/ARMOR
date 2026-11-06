@@ -35,8 +35,7 @@ cd ARMOR
 git lfs pull
 ```
 
-SmallBoom, LargeBoom, and MegaBoom use Git LFS. A file starting with
-`version https://git-lfs.github.com/spec/v1` is a pointer, not a FIRRTL design.
+SmallBoom, LargeBoom, and MegaBoom use Git LFS. 
 
 ## Build
 
@@ -126,32 +125,6 @@ Results are isolated by date, design, Armor configuration, and driver:
 ```
 
 The directory contains the generated header, generated random driver when applicable, compiled emulator, and per-stage logs. `simrun.log` is the primary summary log: it records each invoked stage, its command, timestamps, exit code, and elapsed time.
-
-## ICT implementation
-
-The supported packer is ICT (`--slp-packer ict`). The pipeline performs ARMOR
-normalization, ICT discovery, register packing, filtering, alignment planning,
-scheduling, and packed C++ emission. The paper packer has been removed.
-
-SLP sources are organized under `src/main/scala/armor/slp/` into `analysis`,
-`packing`, `planning`, `lowering`, `emission`, and `reporting`. They retain the
-Scala package `armor.slp`.
-
-The simulator runner uses a 128 MB JVM stack for generation. Select a CPU
-available on your machine with `--core N` (default: 10). The performance matrix
-scripts are separate experiment tools; review their design/configuration lists
-and set `CORE` before running them. The completed-matrix runner also requires
-`BASE_DIR` pointing to an existing matrix directory.
-
-## Validation
-
-```sh
-sbt compile test
-```
-
-The existing suite contains 37 tests. GEMM C++ output was also compared before
-and after the alignment emission refactor for ICT Phase 1 and Phase 2 and was
-byte-identical. This does not constitute end-to-end validation of every design.
 
 ## Licenses and third-party code
 

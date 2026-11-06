@@ -147,20 +147,20 @@ write_manifests() {
   printf 'label\tconfig\tdriver\tout\n' > "$RUN_MANIFEST"
 
   local circuits=(
-    # 'gemm|GEMM_16_16_8|random'
-    # 'conv2d|Conv2D_16_16_8|random'
-    # 'gemmini-full|gemmini-full-32x32mesh-1x1-all-uint8|random'
-    # 'MediumRocket-8C|MediumRocket-8C|random,emulator_essent'
-    # 'SmallBoom-8C|SmallBoom-8C|random,emulator_essent'
+    'gemm|GEMM_16_16_8|random'
+    'conv2d|Conv2D_16_16_8|random'
+    'gemmini-full|gemmini-full-32x32mesh-1x1-all-uint8|random'
+    'MediumRocket-8C|MediumRocket-8C|random,emulator_essent'
+    'SmallBoom-8C|SmallBoom-8C|random,emulator_essent'
     # 'LargeBoom-8C|LargeBoom-8C|random,emulator_essent'
     # 'MegaBoom-8C|MegaBoom-8C|random,emulator_essent'
-    'MegaBoom-8C|MegaBoom-8C|emulator_essent'
+    # 'MegaBoom-8C|MegaBoom-8C|emulator_essent'
   )
   local configs=(
     'O0|O0|off|none'
     'O2_no_slp|O2|off|none'
-    # 'O2_slp_phase1|O2|lowering|false'
-    # 'O2_slp_phase2|O2|lowering|true'
+    'O2_slp_phase1|O2|lowering|false'
+    'O2_slp_phase2|O2|lowering|true'
   )
 
   local circuit config label design drivers top config_name opt slp_mode phase2 out driver
